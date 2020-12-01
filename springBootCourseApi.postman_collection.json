@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "5bc9dce2-5c3a-475b-bdb6-fc2c0648c348",
+		"name": "springBootCourseApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "topics",
+			"item": [
+				{
+					"name": "Get All Topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics"
+							]
+						},
+						"description": "Retrieve all topics"
+					},
+					"response": []
+				},
+				{
+					"name": "Add topic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"name\": \"java\", \n    \"description\": \"Java description framework\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/topics",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topic by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/topics/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Topic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : 1,\n    \"name\": \"java\", \n    \"description\": \"UPDATED Java description framework\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/topics/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete topic",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/topics/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "Get all courses of a topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/topics/1/courses",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"name\": \"spring-boot\",\n    \"description\":\"Description spring boot\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/topics/1/courses",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update couse",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"name\": \"spring-boot\",\n    \"description\":\"UPDATED Description spring boot\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8888/topics/1/courses/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/topics/1/courses/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"topics",
+								"1",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
